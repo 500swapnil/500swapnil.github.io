@@ -30,7 +30,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
 
   </head>
 
@@ -287,7 +287,7 @@
         </a>
         <div class="container text-center">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-12 mx-auto">
               <h2 class="text-secondary text-uppercase mb-0">Traffic Sign Recognition</h2>
               <hr class="star-dark mb-5">
               <!-- <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt=""> -->
@@ -295,7 +295,46 @@
                 <source src="videos/2.webm" type="video/webm">
                 Your browser does not support the video tag.
               </video>
-              <p class="mb-5">F</p>
+              <p class="mb-2">Created this Python program using OpenCV for detecting traffic signs and 2 Deep CNN Image classifiers in
+                Tensorflow, 1 for detecting a traffic sign and 1 for classifying which traffic sign it is. This is part of the
+                autonomous driving car. Built this while working at Robotics Research Center, under the guidance of Dr.Madhav Krishna.</p>
+              <p class="mb-5">I've gone through various layers of image processing to narrow down number of images to sent to the classifier.</p>
+              <h3 class="text-secondary mb-2">Step 1: Conversion from RGB to HSV</h3>
+              <video class="img-fluid mb-5" autoplay muted loop>
+                <source src="videos/hsv.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <h3 class="text-secondary mb-2">Step 2: Creating binary images using sectors of hue for blue and red</h3>
+              <div class="row">
+                <div class="col-md-6 col-lg-6">
+                  <figure>
+                    <img class="img-fluid mb-5" src="videos/blue_bin.gif" alt="">
+                    <figcaption class="text-secondary mb-5">Blue Binary</figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <figure>
+                      <img class="img-fluid mb-5" src="videos/red_bin.gif" alt="">
+                      <figcaption class="text-secondary mb-5">Red Binary</figcaption>
+                    </figure>
+                </div>
+              </div>  
+              <h3 class="text-secondary mb-2">Step 3: Reading Polygons and selecting candidates based on number of edges</h3>
+              <video class="img-fluid mb-5" autoplay muted loop>
+                <source src="videos/candidates.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <h3 class="text-secondary mb-2">Step 4: Lenet Classifier tells whether the polygon is a traffic sign based on confidence</h3>
+              <video class="img-fluid mb-5" autoplay muted loop>
+                <source src="videos/detect.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <h3 class="text-secondary mb-2">Step 5: Sermanet Classifier tells which traffic sign it is</h3>
+              <video class="img-fluid mb-5" autoplay muted loop>
+                <source src="videos/2.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+              <p class="mb-3">Source Code for this program can be found <a href="https://github.com/500swapnil/traffic-sign">here</a></p>
               <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Project</a>
