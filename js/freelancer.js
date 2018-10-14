@@ -57,12 +57,18 @@
     modal: true,
     callbacks: {
       open: function() {
-        $( "video" ).each(function() {
+        this.content.find('video').each(function() {
           $( this ).get(0).play()
+        });
+      },
+      close: function() {
+        this.content.find('video').each(function(){
+          $( this ).get(0).pause()
         });
       }
     }
   });
+
   $(document).on('click', '.portfolio-modal-dismiss', function(e) {
     e.preventDefault();
     $.magnificPopup.close();
