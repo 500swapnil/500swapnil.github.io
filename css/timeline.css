@@ -16,7 +16,7 @@
   .timeline > ul > li::after {
     content: "";
     position: absolute;
-    left: 50%;
+    left: -3vw;
     bottom: 0;
     transform: translateX(-50%) rotate(45deg);
     width: 20px;
@@ -35,7 +35,7 @@
     display: flex;
     align-items: left;
     width: auto;
-    max-width: 60rem;
+    max-width: 70vw;
   }
 
   .timeline > ul > li h1 {
@@ -45,9 +45,9 @@
   .timeline > ul > li div > time {
     position: absolute;
     background: #f5af19;
-    height: 30px;
-    width: 200px;
-    top: -15px;
+    height: 3vh;
+    width: 20vh;
+    top: -2vh;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -66,13 +66,13 @@
     text-align: justify;
   }
   .timeline ul li div .experience {
-    margin-right: 10px;
+    width: 100vw;
   }
   .timeline ul li:nth-of-type(odd) div {
-    left: 45px;
+    left: 1vw;
   }
   .timeline ul li:nth-of-type(even) div {
-    left: 45px;
+    left: 1vw;
   }
   
   .timeline ul li div {
